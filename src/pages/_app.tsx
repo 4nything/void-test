@@ -25,5 +25,6 @@ export default function App({ Component, pageProps }: AppProps) {
 }
 
 function getTitle(pathname: string): string {
-  return `VOID - ${pathname.charAt(0).toUpperCase()}${pathname.substring(1)}`;
+  const name = pathname.split('/')[0];
+  return `VOID - ${name.charAt(0).toUpperCase()}${name.substring(1)}`;
 }
